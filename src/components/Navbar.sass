@@ -1,0 +1,40 @@
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: .875rem 2rem
+  background-color: rgba(255, 255, 255, 0.7)
+
+  a
+    text-decoration: none
+  
+  &__link
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  &__logo
+    height: 2.75rem
+    width: 12rem
+
+  &__title
+    color: #0f172A
+
+  &__nav-wrapper
+    display: flex
+    gap: 2rem
+    height: 2rem
+
+
+  &__about, &__sponsor
+    color: #475569
+    font-size: 1.5rem
+    &.active
+      color: #d0000d
+      border-bottom: 2px solid #d0000d
+    &:hover
+      color: #d0000d
+      border-bottom: 2px solid #d0000d
+
+    
