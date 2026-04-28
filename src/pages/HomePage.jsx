@@ -1,10 +1,7 @@
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
+import Footer from '../components/Footer.jsx'
 import '../styles/homepage.sass'
-import heartIcon from '../assets:icons/heart-icon.svg'
-import natureIcon from '../assets:icons/nature-icon.svg'
-import boy from '../assets:icons/frontpage-boy-img.png'
-import farm from '../assets:icons/frontpage-farm.png'
 
 export default function Homepage() {
   return (
@@ -36,7 +33,9 @@ export default function Homepage() {
             bare være børn.</p>
           <ul className="why__ul">
             <li className="why__li">
-              <img src={heartIcon} alt="Heart icon" className="why__li-img" />
+              <figure className="why__li-figure">
+                <img src="/icons/heart-icon.svg" alt="Heart icon" className="why__li-img" />
+              </figure>
               <article className="why__li-article-wrapper">
                 <h2 className="why__li-title">Tryghed og Nærvær</h2>
                 <p className="why__li-subtitle">Vi skaber rammerne for dybe relationer og pædagogisk støtte i rolige       omgivelser.
@@ -44,7 +43,9 @@ export default function Homepage() {
               </article>
             </li>
             <li className="why__li">
-              <img src={natureIcon} alt="nature icon" className="why__li-img" />
+              <figure className="why__li-figure">
+                <img src="/icons/nature-icon.svg" alt="nature icon" className="why__li-img" />
+              </figure>
               <article className="why__li-article-wrapper">
                 <h2 className="why__li-title">Naturens Kraft</h2>
                 <p className="why__li-subtitle">Sydlangelands natur giver børnene plads til at udforske, lege og finde indre ro.</p>
@@ -53,7 +54,7 @@ export default function Homepage() {
           </ul>
         </article>
         <figure className="why__figure">
-          <img src={boy} alt="boy cartoon" className="why__figure-img" />
+          <img src="/icons/frontpage-boy-img.png" alt="boy cartoon" className="why__figure-img" />
           <figcaption className="why__figure-caption">
             <p className="why__figure-caption-quote">"Lejren er det eneste tidspunkt på året, hvor jeg føler, at jeg ikke skal passe på mine forældre."</p>
             <p className="why__figure-caption-quote-owner">- Tidligere deltager, 11 år</p>
@@ -69,9 +70,19 @@ export default function Homepage() {
         </article>
 
         <figure className="banner__article-figure">
-          <img src={farm} alt="ai farm image" className="banner__article-figure-img" />
+          <img src="/icons/frontpage-farm.png" alt="ai farm image" className="banner__article-figure-img" />
         </figure>
       </section>
+
+      <section className="helpus">
+        <article className="helpus__article">
+          <h2 className="helpus__article-title">Hjælp os med at hjælpe dem!</h2>
+          <p className="helpus__article-subtitle">Hvert bidrag gør en forskel. Din støtte sikrer, at vi kan fortsætte med at give børnene den sommer, de fortjener.</p>
+        </article>
+        <Button text="Tilmeld som sponsor" size="medium" color="secondary" link="/sponsor" className="helpus__button" />
+
+      </section>
+      <Footer />
     </main>
   )
 }
