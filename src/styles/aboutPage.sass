@@ -1,0 +1,72 @@
+main 
+    background-color: #F4FAFF
+
+.hero
+    display: grid
+    grid-template-columns: 1fr 1fr
+    background-color: #F4FAFF
+    padding: 4rem 2rem
+
+    &__wrapper
+        max-width: 95%
+        display: flex
+        flex-direction: column
+        padding: 0 3rem
+
+
+    &__span
+        background-color:  #D9F2FF
+        color: #A20006
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 15px
+        text-transform: uppercase
+        font-family: 'Helvetica Neue', sans-serif
+        font-weight: 700
+        font-size: 0.875rem
+        width: 9.375rem
+
+    &__title
+        font-family: 'Urbanist', sans-serif
+        font-weight: 700
+        color: #001F2A
+        font-size: 4.5rem
+
+    &__title span 
+        color: #A20006
+
+    &__subtitle
+        font-family: 'Helvetica Neue', sans-serif
+        color: #5E3F3B
+        font-size: 1.25rem
+
+    &__box
+        width: 100%
+        box-sizing: border-box
+        padding: 2rem
+        background-color: #C9E7F7
+        border-left: 4px solid #D0000B
+        border-radius: 8px
+        display: flex
+        flex-direction: column
+        gap: 1rem
+
+    &__box-title
+        font-family: 'Urbanist', sans-serif
+        color: #001F2A
+        font-size: 1.25rem
+        font-weight: 700
+
+    &__box-subtitle
+        font-family: 'Helvetica Neue', sans-serif
+        color: #5E3F3B
+        font-size: 1rem
+
+    &__figure-img
+        grid-area: 1 / 1
+        width: 100%
+        object-fit: contain
+        border-radius: 15px
+        max-height: 600px
+        height: 100%
