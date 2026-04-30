@@ -36,6 +36,63 @@ export default function About() {
 					/>
 				</figure>
 			</section>
+
+			<section className="farm">
+				<article className="farm__article">
+					<h2 className="farm__title">Søgård Hovedgård</h2>
+					<p className="farm__subtitle">
+						Hjertet af vores lejr findes på den historiske Søgård Hovedgård på
+						Sydlangeland. Her, omgivet af åbne vidder og tæt på havets brusen,
+						skaber vi rammerne for en uge fyldt med eventyr. Gården danner den
+						perfekte kulisse for både afslapning og vilde lege i naturen.
+					</p>
+
+					<ul className="farm__ul">
+						<li className="farm__li">
+							<img
+								src="../../public/icons/red-checkmark.svg"
+								alt="red checkmark"
+								className="farm__li-icon"
+							/>
+							<p className="farm__li-text">Historiske rammer med sjæl</p>
+						</li>
+						<li className="farm__li">
+							<img
+								src="../../public/icons/red-checkmark.svg"
+								alt="red checkmark"
+								className="farm__li-icon"
+							/>
+							<p className="farm__li-text">Rig mulighed for naturoplevelser</p>
+						</li>
+						<li className="farm__li">
+							<img
+								src="../../public/icons/red-checkmark.svg"
+								alt="red checkmark"
+								className="farm__li-icon"
+							/>
+							<p className="farm__li-text">Trygge omgivelser for alle børn</p>
+						</li>
+					</ul>
+				</article>
+				<figure className="farm__figure">
+					<img
+						src="/icons/frontpage-farm.png"
+						alt="farm image"
+						className="farm__figure-img"
+					/>
+					<img
+						src="/icons/farm-back.jpg"
+						alt="farm image"
+						className="farm__figure-img"
+					/>
+					<img
+						src="/icons/farm-pool.jpg"
+						alt="farm image"
+						className="farm__figure-img"
+					/>
+				</figure>
+			</section>
+
 			<Footer />
 		</main>
 	);

@@ -1,3 +1,5 @@
+@use '../styles/_variables' as var
+
 .footer
   background-color: #F8FAFC
   display: flex
@@ -17,13 +19,13 @@
     gap: 1rem
 
   &__section-left-title
-    font-family: 'Urbanist', sans-serif
+    font-family: var.$heading-font
     font-size: 1.125rem
     font-weight: 700
     color: #0f172a
 
   &__section-left-subtitle
-    font-family: 'Helvetica Neue', sans-serif
+    font-family: var.$paragraph-font
     font-size: 1rem
     color: #64748b
     width: 80%
@@ -34,13 +36,13 @@
     gap: 1rem
 
   &__nav-title
-    font-family: 'Urbanist', sans-serif
+    font-family: var.$heading-font
     font-size: 1.125rem
     font-weight: 700
     color: #0f172a
 
   &__nav-link
-    font-family: 'Helvetica Neue', sans-serif
+    font-family: var.$paragraph-font
     text-decoration: none
     color:#64748b
     font-size: 1rem
@@ -51,13 +53,13 @@
     gap: 1rem
 
   &__section-right-title
-    font-family: 'Urbanist', sans-serif
+    font-family: var.$heading-font
     font-size: 1.125rem
     font-weight: 700
     color: #0f172a
 
   &__section-right-subtitle
-    font-family: 'Helvetica Neue', sans-serif
+    font-family: var.$paragraph-font
     font-size: 1rem
     color: #64748b
 
@@ -68,6 +70,24 @@
 
   &__copyright
     padding: 2rem
-    font-family: 'Helvetica Neue', sans-serif
+    font-family: var.$paragraph-font
     font-size: 1rem
     color: #94a3b8
+
+@media (max-width: 768px)
+  .footer
+    &__wrapper
+      grid-template-columns: 1fr 1fr
+      padding: 1.5rem
+
+@media (max-width: 480px)
+  .footer
+    &__wrapper
+      grid-template-columns: 1fr
+      padding: 1rem
+      gap: 1.5rem
+    &__section-left-subtitle
+      width: 100%
+    &__copyright
+      padding: 1rem
+      font-size: 0.875rem

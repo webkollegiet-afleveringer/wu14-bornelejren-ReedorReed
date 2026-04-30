@@ -112,7 +112,7 @@ export default function Homepage() {
 				<figure className="banner__article-figure">
 					<img
 						src="/icons/frontpage-farm.jpg"
-						alt="ai farm image"
+						alt="farm image"
 						className="banner__article-figure-img"
 					/>
 				</figure>

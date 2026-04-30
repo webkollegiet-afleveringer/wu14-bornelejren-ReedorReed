@@ -1,3 +1,7 @@
+@use 'reset'
+@use 'variables'
+
+
 main 
     background-color: #F4FAFF
     
@@ -20,13 +24,13 @@ main
         padding: 8px
         border-radius: 15px
         text-transform: uppercase
-        font-family: 'Helvetica Neue', sans-serif
+        font-family: variables.$paragraph-font
         font-weight: 700
         font-size: 0.875rem
         width: 9.375rem
 
     &__title
-        font-family: 'Urbanist', sans-serif
+        font-family: variables.$heading-font
         font-weight: 700
         color: #001F2A
         font-size: 4.5rem
@@ -35,7 +39,7 @@ main
         color: #A20006
 
     &__subtitle
-        font-family: 'Helvetica Neue', sans-serif
+        font-family: variables.$paragraph-font
         color: #5E3F3B
         font-size: 1.25rem
 
@@ -87,13 +91,13 @@ main
         gap: 1rem
 
     &__title
-        font-family: 'Urbanist', sans-serif
+        font-family: variables.$heading-font
         color: #001F2A
         font-size: 2.25rem
         font-weight: 700
     
     &__subtitle
-        font-family: 'Helvetica Neue', sans-serif
+        font-family: variables.$paragraph-font
         color: #5E3F3B
         font-size: 1rem
     
@@ -102,3 +106,58 @@ main
         grid-template-columns: 1fr 1fr 1fr
         gap: 3rem
         margin-bottom: 6rem
+
+@media (max-width: 1024px)
+    main
+        .hero
+            grid-template-columns: 1fr
+            gap: 2rem
+            &__wrapper
+                max-width: 100%
+            &__title
+                font-size: 3rem
+            &__figure
+                justify-content: center
+
+        .support
+            &__cards
+                grid-template-columns: 1fr 1fr
+
+@media (max-width: 768px)
+    main
+        .hero
+            padding: 2rem 1rem
+            &__title
+                font-size: 2.25rem
+            &__subtitle
+                font-size: 1.1rem
+            &__figure
+                max-width: 100%
+                aspect-ratio: 1
+
+        .support
+            padding: 2rem 1rem
+            gap: 3rem
+            &__title
+                font-size: 1.75rem
+            &__cards
+                grid-template-columns: 1fr
+
+@media (max-width: 480px)
+    main
+        .hero
+            padding: 1.5rem 1rem
+            &__title
+                font-size: 1.75rem
+            &__subtitle
+                font-size: 1rem
+            &__span
+                font-size: 0.75rem
+                width: 7rem
+
+        .support
+            padding: 1.5rem 1rem
+            &__title
+                font-size: 1.4rem
+            &__subtitle
+                font-size: 0.9rem

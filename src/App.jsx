@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router"
 import HomePage from "./pages/HomePage.jsx"
 import About from "./pages/About.jsx"
 import Sponsor from "./pages/Sponsor.jsx"
-import './styles/reset.sass'
+import './styles/_reset.sass'
 
 function App() {
 
