@@ -1,0 +1,83 @@
+@use '../styles/_variables' as var
+
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #ffffff
+  background-color: #d0000b
+  font-family: var.$paragraph-font
+  border: none
+  border-radius: 25px
+  font-weight: 500
+  cursor: pointer
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4)
+  text-decoration: none
+  font-size: 1.3rem
+
+  &:disabled
+    opacity: 0.5
+    cursor: not-allowed
+
+.button--small
+  width: 16rem
+  height: 2.5rem
+  padding: .875rem
+
+.button--medium
+  padding: .875rem
+  width: 24rem
+  height: 4rem
+
+.button--large
+  padding: .875rem
+  height: 1.2rem
+  width: 36rem
+
+.button--primary
+  background-color: #d0000b
+  color: white
+
+  &:hover:not(:disabled)
+    background-color: #cf4a3d
+
+.button--secondary
+  background-color: #fff
+  color: #d0000b
+
+  &:hover:not(:disabled)
+    background-color: #cf4a3d
+    color: white
+
+.button--outline
+  background-color: transparent
+  border: 2px solid currentColor
+  color: #A20006
+
+  &:hover:not(:disabled)
+    background-color: #D0000B
+    color: white
+    border: none
+
+@media (max-width: 768px)
+    .button
+        font-size: 1.1rem
+    .button--medium
+        width: 18rem
+        height: 3.5rem
+        padding: .75rem
+
+@media (max-width: 480px)
+    .button
+        font-size: 1rem
+    .button--small
+        width: 12rem
+        height: 2.25rem
+        padding: .625rem
+    .button--medium
+        width: 14rem
+        height: 3rem
+        padding: .625rem
+    .button--large
+        width: 100%
+        max-width: 20rem

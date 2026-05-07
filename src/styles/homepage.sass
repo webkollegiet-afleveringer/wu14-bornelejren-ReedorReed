@@ -1,0 +1,320 @@
+@use 'reset'
+@use 'variables'
+
+.main
+
+  .hero
+    display: flex
+    flex-direction: column
+    height: 100dvh
+    justify-content: center
+    padding: 2.3rem
+    padding-bottom: 0
+    background-image: url("../../public/icons/full-shot-smiley-kids-forest.jpg")
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: cover
+    background-color: rgba(0,0,0,0.6)
+    background-blend-mode: multiply
+    height: 100dvh
+
+    &__title
+      font-size: 4.7rem
+      max-width: 50%
+      color: #fff
+      font-family: variables.$heading-font
+      margin-bottom: 0
+
+    &__subtitle
+      font-size: 1.5rem
+      color: #fff
+      max-width: 30%
+      margin-bottom: 1.5rem
+
+.mission
+  display: flex
+  flex-direction: column
+  background-color: #e6f6ff
+  height: 50dvh
+  justify-content: center
+  align-items: center
+  margin-bottom: 3rem
+
+  &__article
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  
+  &__title
+    font-family: variables.$heading-font
+    font-size: 0.875rem
+    font-weight: 700
+    color: #a20006
+
+  &__subtitle
+    font-family: variables.$paragraph-font
+    font-size: 2.25rem
+    font-weight: 700
+    color: #001f2a
+    max-width: 50rem
+    text-align: center
+
+  &__line
+    height: 0.25rem
+    width: 6rem
+    background-color: #d0000b
+
+.why
+  background-color: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    max-width: 43.6rem
+
+  &__title
+    font-family: variables.$heading-font
+    font-size: 2.5rem
+    font-weight: 700
+    margin: 0
+
+  &__title-span
+    color: #d0000b
+
+  &__subtitle
+    font-family: variables.$paragraph-font
+    font-size: 1.125rem
+    color: #5E3F3B
+  
+  &__ul
+    list-style: none
+    padding-left: 0
+    margin-top: 1rem
+  
+
+  &__li
+    display: flex
+    gap: 1rem
+    
+  &__li-figure
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #f0e1e7
+    width: 2.5rem
+    height: 2.5rem
+    border-radius: 5px
+
+  &__li-img
+    width: 1.5rem
+    height: 1.5rem
+
+
+  &__li-article-wrapper
+    display: flex
+    flex-direction: column
+
+  &__li-title
+    font-family: variables.$heading-font
+    font-size: 1.25rem
+    padding: 0
+    margin: 0
+
+  &__li-subtitle
+    font-family: variables.$paragraph-font
+    font-size: 1rem
+    padding: 0
+    margin: 0 0 2rem 0
+    color: #5e3f3b
+
+  &__figure
+    display: grid
+    grid-template-rows: 2fr 1fr
+    max-width: 43.6rem
+    width: 100%
+    align-items: start
+    grid-gap: 1rem
+
+    & img
+      width: 100%
+      height: auto
+      object-fit: cover
+      border-radius: 15px
+
+  &__figure-caption
+    width: 100%
+    box-sizing: border-box
+    padding: 2rem
+    background-color: #C9E7F7
+    border-left: 4px solid #D0000B
+    border-radius: 8px
+
+  &__figure-caption-quote
+    font-family: variables.$paragraph-font
+    font-size: 1.125rem
+    color: #001F2A
+
+  &__figure-caption-quote-owner
+    font-family: variables.$paragraph-font
+    font-size: 1.125rem
+    font-weight: 600
+    color: #A20006
+
+
+.banner
+  display: grid
+  grid-template-columns: 1fr 1fr
+  align-items: center
+  background-color: #e6f6ff
+
+  &__article
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    padding: 4rem
+
+
+  &__article-title
+    font-family: variables.$heading-font
+    font-size: 3rem
+    font-weight: 700
+    color: #001f2a
+
+  &__article-subtitle
+    font-family: variables.$paragraph-font
+    color: #5e3f3b
+  
+  &__article-figure
+    padding: 4rem
+
+@media (max-width: 1024px)
+  .main
+    .hero
+      &__title
+        font-size: 3.5rem
+        max-width: 60%
+      &__subtitle
+        max-width: 40%
+
+  .banner
+    grid-template-columns: 1fr
+    &__article
+      padding: 2rem
+    &__article-figure
+      padding: 2rem
+      display: flex
+      justify-content: center
+    &__article-figure-img
+      width: 60%
+
+@media (max-width: 768px)
+  .main
+    .hero
+      padding: 1.5rem
+      &__title
+        font-size: 2.5rem
+        max-width: 80%
+      &__subtitle
+        max-width: 60%
+        font-size: 1.2rem
+
+    .mission
+      height: auto
+      padding: 3rem 1.5rem
+      &__subtitle
+        font-size: 1.75rem
+
+    .why
+      &__wrapper
+        padding: 2rem 1.5rem
+      &__figure
+        grid-template-rows: auto
+
+    .banner
+      &__article-title
+        font-size: 2rem
+
+    .helpus
+      height: auto
+      padding: 3rem 1.5rem
+      &__article-title
+        font-size: 2.5rem
+
+@media (max-width: 480px)
+  .main
+    .hero
+      padding: 1rem
+      &__title
+        font-size: 1.8rem
+        max-width: 100%
+      &__subtitle
+        max-width: 100%
+        font-size: 1rem
+
+    .mission
+      padding: 2rem 1rem
+      &__subtitle
+        font-size: 1.4rem
+        max-width: 100%
+
+    .why
+      padding: 2rem 1rem
+      &__title
+        font-size: 1.8rem
+      &__subtitle
+        font-size: 1rem
+
+    .banner
+      &__article-title
+        font-size: 1.5rem
+      &__article-subtitle
+        font-size: 1rem
+      &__article-figure-img
+        width: 80%
+
+    .helpus
+      padding: 2rem 1rem
+      &__article-title
+        font-size: 1.8rem
+      &__article-subtitle
+        font-size: 1rem
+
+      &__article-figure-img
+        width: 80%
+        object-fit: contain
+        transform: rotate(2deg)
+        border-radius: 5%
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6)
+
+.helpus
+  display: flex
+  flex-direction: column
+  background-color: #d0000b
+  justify-content: center
+  align-items: center
+  height: 50dvh
+  gap: 1rem
+
+  &__article
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 0.875rem
+    margin-bottom: 1rem
+
+  &__article-title
+    font-family: variables.$heading-font
+    font-size: 3.75rem
+    font-weight: 700
+    color: #fff
+
+  &__article-subtitle
+    font-family: variables.$paragraph-font
+    font-size: 1.25rem
+    color: #fff
+
